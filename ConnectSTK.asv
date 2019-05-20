@@ -1,0 +1,17 @@
+
+%Start up the program itself
+
+app = actxserver('STK11.application')
+app.UserControl = 1
+root = app.Personality2
+
+%Setup Scenario
+scenario = root.Children.New('eScenario','MATLAB_Starter')
+scenario.SetTimePeriod('Today','+24hr') %Set Animation time to like... 8 months?
+root.ExecuteCommand('Animate * Reset')
+
+satellite = scenario.Children
+
+%Iterate over and add targets here with the coastal code
+target = scenario.Children.New('eTarget', 'GroundTarget');
+target.Position.AssignGeodetric(50,-100,0)
