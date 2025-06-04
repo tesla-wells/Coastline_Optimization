@@ -1,0 +1,1 @@
+When this code was written in 2019 there were multiple rideshare opportunities (rockets with extra payload space) for earth observing science cubesats. MIT and at the Woods Hole Oceanographic Institute wanted to know if there were certain orbits that would spend more time over coastlines. This code was used with an OrbitalSDK plugin to select which rideshare made the most sense. 
